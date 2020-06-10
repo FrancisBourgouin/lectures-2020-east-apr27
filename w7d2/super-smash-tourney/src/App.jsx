@@ -95,3 +95,14 @@ const notTheUseStateHookButKinda = (value) => {
 
   return [internalValue, changeInternalValue]
 }
+
+const purePop = arr => arr.map((item, index) => {
+  if (index !== arr.length - 1) {
+    return item
+  }
+})
+
+const anotherPurePop = arr => {
+  const newArr = [...arr].pop()
+  return newArr
+}
